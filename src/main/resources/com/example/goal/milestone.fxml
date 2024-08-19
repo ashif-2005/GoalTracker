@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1E201E;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.goal.milestoneController">
+   <Pane layoutX="14.0" layoutY="16.0" prefHeight="368.0" prefWidth="572.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+      <Separator layoutX="161.0" orientation="VERTICAL" prefHeight="368.0" prefWidth="7.0" />
+      <Separator layoutX="-1.0" layoutY="134.0" prefHeight="3.0" prefWidth="572.0" />
+      <Text layoutX="31.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal" wrappingWidth="172.699951171875">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="31.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tracker" wrappingWidth="97.99999999999977">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Button layoutY="134.0" mnemonicParsing="false" onAction="#handelUser" prefHeight="37.0" prefWidth="163.0" style="-fx-background-color: trans;" text="Goal">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutY="170.0" mnemonicParsing="false" onAction="#handelWorkout" prefHeight="37.0" prefWidth="163.0" style="-fx-background-color: black;" text="Milestone" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutY="330.0" mnemonicParsing="false" onAction="#handelLogout" prefHeight="37.0" prefWidth="163.0" style="-fx-background-color: red;" text="Logout" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="gid" layoutX="172.0" layoutY="57.0" prefHeight="25.0" prefWidth="40.0" promptText="Id" />
+      <Button layoutX="499.0" layoutY="104.0" mnemonicParsing="false" onAction="#handelDelete" prefHeight="30.0" prefWidth="65.0" text="Delete" />
+      <Button layoutX="411.0" layoutY="104.0" mnemonicParsing="false" onAction="#handelUpdate" prefHeight="30.0" prefWidth="65.0" text="Update" />
+      <Button layoutX="323.0" layoutY="104.0" mnemonicParsing="false" onAction="#handelInsert" prefHeight="30.0" prefWidth="65.0" text="Insert" />
+      <TableView fx:id="milestoneTable" layoutX="170.0" layoutY="140.0" prefHeight="223.0" prefWidth="396.0">
+         <columns>
+            <TableColumn fx:id="id" prefWidth="36.0" text="Id" />
+            <TableColumn fx:id="goalId" prefWidth="50.4000244140625" text="Goal Id" />
+            <TableColumn fx:id="Description" prefWidth="140.79998779296875" text="Description" />
+            <TableColumn fx:id="datetime" prefWidth="81.60003662109375" text="Due Date" />
+            <TableColumn fx:id="status" prefWidth="86.40008544921875" text="Status" />
+         </columns>
+      </TableView>
+      <TextField fx:id="des" layoutX="221.0" layoutY="57.0" prefHeight="25.0" prefWidth="112.0" promptText="Description" />
+      <TextField fx:id="sts" layoutX="473.0" layoutY="57.0" prefHeight="25.0" prefWidth="89.0" promptText="Status" />
+      <TextField fx:id="due" layoutX="345.0" layoutY="58.0" prefHeight="25.0" prefWidth="112.0" promptText="Date" />
+   </Pane>
+</Pane>
